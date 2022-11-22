@@ -1,0 +1,31 @@
+:root {
+  --primary-color: #F0AC2F;
+  --secondary-color: #7E6527;
+  --black-color: #080904;
+  --black-color-80: rgba(8, 9, 4, 0.8);;
+  --white-color: #F9FAFC;
+  --white-color-90: #F9FAFC90;
+  --btn-color: #CBCCCD;
+  --background-color: rgba(29, 39, 34, 0.8);
+  --background-color-cero: rgba(29, 39, 34, 0);
+  --border: #7E6527 2px solid;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background: radial-gradient(97.5% 97.5% at 50% 2.5%, #001D19 0%, #091000 49.55%, #050400 100%, #050400 100%);
+}
+
+h1 {
+  font-size: 40px;
+  color: white;
+}

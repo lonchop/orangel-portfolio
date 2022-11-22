@@ -1,34 +1,35 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import React, { useState, useEffect, useContext } from "react";
+import { Navbar } from "./components/1-navbar/Navbar";
+import { Hero } from "./components/2-hero/Hero";
+import { About } from "./components/3-about/About";
+import { Projects } from "./components/4-projects/Projects";
+import { Contact } from "./components/5-contact/Contact";
+import { LangContext } from "./context/langContext";
+import "./App.scss";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const leng = useContext(LangContext);
+
+  const [scrollY, setScrollY] = useState(0);
+
+  const handleScroll = () => {
+    const position = window.pageYOffset;
+    setScrollY(position);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+  }, [scrollY]);
 
   return (
     <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Navbar scrolling={scrollY} />
+      <Hero />
+      <About />
+      <Projects />
+      <Contact />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
