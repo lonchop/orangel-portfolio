@@ -16,13 +16,13 @@ export const Contact = () => {
                 <div className="input-container">
                   <div>
                     <label>
-                      <FormattedMessage id="app.name" />
+                      <FormattedMessage id="app.name" defaultMessage="Name"/>
                     </label>
                     <input type="text" className="input" />
                   </div>
                   <div>
                     <label>
-                      <FormattedMessage id="app.email" />
+                      <FormattedMessage id="app.email" defaultMessage="Email"/>
                     </label>
                     <input type="text" className="input" />
                   </div>
@@ -30,7 +30,7 @@ export const Contact = () => {
                 <div className="input-container-2">
                   <div className="div">
                     <label>
-                      <FormattedMessage id="app.message" />
+                      <FormattedMessage id="app.message" defaultMessage="Message" />
                     </label>
                     <textarea
                       name=""
@@ -46,7 +46,7 @@ export const Contact = () => {
             <button className="btn-send">
               <img src={sendIcon} alt="cv-icon" />
               <p>
-                <FormattedMessage id="app.btn-send" />
+                <FormattedMessage id="app.btn-send" defaultMessage="Send now" />
               </p>
             </button>
           </div>
@@ -65,7 +65,7 @@ export const Contact = () => {
             </a>
           </div>
           <p>
-            <FormattedMessage id="app.footer-text" />
+            <FormattedMessage id="app.footer-text" defaultMessage="Made by "/>
             <span>Orangel</span> — Copyright © 2022
           </p>
         </footer>

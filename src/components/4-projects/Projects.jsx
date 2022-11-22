@@ -9,7 +9,7 @@ export const Projects = () => {
     <>
       <section id="projects" className="projects">
         <h2>
-          <FormattedMessage id="app.title-project" />
+          <FormattedMessage id="app.title-project" defaultMessage="Projects"/>
         </h2>
         <div className="cards-container">
           {DataProjects.info.map((DataProject) => (

@@ -18,7 +18,7 @@ export const Card = ({ title, description, img, repo, demo }) => {
             </a>
             <a target="_blank" href={demo}>
               <button className="btn-card">
-                <p><FormattedMessage id="app.view-demo" /></p>
+                <p><FormattedMessage id="app.view-demo" defaultMessage="View Demo"/></p>
               </button>
             </a>
           </div>
