@@ -17,5 +17,6 @@
   "app.email": "Email",
   "app.message": "Message",
   "app.btn-send": "Send now",
-  "app.footer-text": "Made by "
+  "app.footer-text": "Made by ",
+  "app.error-message": "Please fill in the form correctly."
 }

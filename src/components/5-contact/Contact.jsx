@@ -1,13 +1,61 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import linkedinIcon from "../../assets/linkedin-icon.svg";
 import githubIcon from "../../assets/github-icon.svg";
 import sendIcon from "../../assets/send-icon.svg";
-import { FormattedMessage } from "react-intl";
+import { FormattedMessage} from "react-intl";
 import emailjs from "@emailjs/browser";
+import Swal from "sweetalert2";
+import withReactContent from "sweetalert2-react-content";
 import "./Contact.scss";
 
 export const Contact = () => {
+  const [userName, setUserName] = useState({ campo: "", valido: null });
+  const [userEmail, setUserEmail] = useState({ campo: "", valido: null });
+  const [validateForm, setValidateForm] = useState(null);
   const form = useRef();
+
+  const expresions = {
+    user_name: /^[a-zA-ZÀ-ÿ\s]{1,40}$/,
+    user_email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
+  };
+
+  const onChangeName = (e1) => {
+    setUserName({ ...userName, campo: e1.target.value });
+  };
+
+  const onChangeEmail = (e2) => {
+    setUserEmail({ ...userEmail, campo: e2.target.value });
+  };
+
+  let errorNameMessage;
+  let errorEmailMessage;
+
+  if (expresions.user_name && expresions.user_email) {
+    if (!expresions.user_name.test(userName.campo)) {
+      errorNameMessage = "El nombre solo puede contener letras";
+    }
+
+    if (!expresions.user_email.test(userEmail.campo)) {
+      errorEmailMessage = "Ingrese un email valido.";
+    }
+  }
+
+  const validation = () => {
+    if (expresions.user_name && expresions.user_email) {
+      if (
+        expresions.user_name.test(userName.campo) &&
+        expresions.user_email.test(userEmail.campo)
+      ) {
+        setUserName({ ...userName, valido: "true" });
+        setUserEmail({ ...userEmail, valido: "true" });
+      } else {
+        setUserName({ ...userName, valido: "false" });
+        setUserEmail({ ...userEmail, valido: "false" });
+      }
+    }
+  };
+
+  const MySwal = withReactContent(Swal);
 
   const sendEmail = (event) => {
     event.preventDefault();
@@ -15,24 +63,43 @@ export const Contact = () => {
     const serviceID = "service_3gu69fh";
     const templateID = "template_flax1re";
     const publicKey = "AX3xLgavg3x-kGbkv";
-    
-    emailjs.sendForm(serviceID, templateID, form.current, publicKey).then(
-      () => {
-        alert("send Email success");
-      },
-      () => {
-        alert("Error sending email");
-      }
-    );
-    event.target.reset();
+
+    if (userName.valido === "true" && userEmail.valido === "true") {
+      setValidateForm(true);
+
+      setUserName({ campo: "", valido: "" });
+      setUserEmail({ campo: "", valido: "" });
+
+      MySwal.fire({
+        width: "240px",
+        background: "#F9FAFC",
+        title: "Sending...",
+        timer: 1600,
+        timerProgressBar: true,
+        didOpen: () => {
+          MySwal.showLoading();
+        },
+      });
+
+      emailjs
+        .sendForm(serviceID, templateID, form.current, publicKey)
+        .then(() => {
+          console.log("success!");
+        });
+
+      event.target.reset();
+    } else {
+      setValidateForm(false);
+    }
   };
+
   return (
     <>
       <section id="contact" className="contact-footer">
         <div className="contact">
           <div className="contact-container">
             <div className="label-container">
-              <form ref={form} onSubmit={sendEmail}>
+              <form ref={form} onSubmit={sendEmail} id="form">
                 <div className="input-container">
                   <div>
                     <label for="user_name">
@@ -43,6 +110,12 @@ export const Contact = () => {
                       className="input"
                       id="user_name"
                       name="user_name"
+                      value={userName.campo}
+                      onChange={onChangeName}
+                      onKeyUp={validation}
+                      onBlur={validation}
+                      valido={userName.valido}
+                      // placeholder={errorNameMessage}
                     />
                   </div>
                   <div>
@@ -54,6 +127,12 @@ export const Contact = () => {
                       className="input"
                       id="user_email"
                       name="user_email"
+                      value={userEmail.campo}
+                      onChange={onChangeEmail}
+                      onKeyUp={validation}
+                      onBlur={validation}
+                      valido={userEmail.valido}
+                      // placeholder={errorEmailMessage}
                     />
                   </div>
                 </div>
@@ -85,6 +164,15 @@ export const Contact = () => {
                     </p>
                   </button>
                 </div>
+                {validateForm === false && (
+                  <p className="error-send">
+                    <b>Error:</b>{" "}
+                    <FormattedMessage
+                      id="app.error-message"
+                      defaultMessage="Please fill in the form correctly."
+                    />
+                  </p>
+                )}
               </form>
             </div>
           </div>

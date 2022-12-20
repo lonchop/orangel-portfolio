@@ -17,5 +17,7 @@
   "app.email": "Email",
   "app.message": "Mensaje",
   "app.btn-send": "Enviar ahora",
-  "app.footer-text": "Hecho por "
+  "app.footer-text": "Hecho por ",
+  "app.error-message": "Por favor rellena el formulario correctamente.",
+  "app.error-name-message": "Error en nombre"
 }
