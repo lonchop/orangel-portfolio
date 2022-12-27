@@ -10,7 +10,7 @@ export const About = () => {
       <section id="about" className="about">
         <div className="btn-download-container">
           <a
-            href="https://drive.google.com/file/d/1SnCZMm8RdF0l1gGkIPpTlf_46_vegw0c/view"
+            href="https://drive.google.com/file/d/1SN_Lt4Ok933KgVDMm5BvwQ_b5ICeSk7O/view?usp=sharing"
             target="_blank"
             className="link-cv"
           >
