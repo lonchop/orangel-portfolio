@@ -1,8 +1,8 @@
 import React, { useState, useContext } from "react";
 import { Link } from "react-scroll";
-import logo from "../../assets/logo.png";
-import iconLanguage from "../../assets/icon-language.png";
-import ham from "../../assets/ham.svg";
+import portfolioLogo from "../../assets/portfolio-logo.svg";
+import languageIcon from "../../assets/language-icon.svg";
+import hamIcon from "../../assets/ham-icon.svg";
 import upIcon from "../../assets/up-icon.svg";
 import { FormattedMessage } from "react-intl";
 import { LangContext } from "../../context/langContext";
@@ -34,7 +34,7 @@ export const Navbar = ({ scrolling }) => {
     <>
       <nav className={`${activeHam ? "navbar-cero" : null} navbar`}>
         <div className="navbar-container">
-          <img src={logo} alt="logo" className="logo" />
+          <img src={portfolioLogo} alt="portfolio-logo" className="portfolio-logo" />
           <ul className="links">
             <li>
               <Link to="hero" smooth duration={800}>
@@ -63,9 +63,9 @@ export const Navbar = ({ scrolling }) => {
         <div className="btn-change-container">
           <button onClick={clickChangeLang} className="btn-change">
             <img
-              src={iconLanguage}
-              alt="icon-language"
-              className="icon-language"
+              src={languageIcon}
+              alt="language-icon"
+              className="language-icon"
             />
             <p className="text-short">
               <FormattedMessage id="app.btn-short" defaultMessage="ES"/>
@@ -76,7 +76,7 @@ export const Navbar = ({ scrolling }) => {
           </button>
         </div>
         <button onClick={clickActiveHam} className="btn-ham">
-          <img src={ham} alt="ham" className="ham" />
+          <img src={hamIcon} alt="ham" className="ham" />
         </button>
       </nav>
 

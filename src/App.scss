@@ -1,16 +1,13 @@
 :root {
-  --negative-color: #511E00;
-  --positive-color: #2B4901;
   --primary-color: #F0AC2F;
-  --secondary-color: #7E6527;
+  --secondary-color-1: #92A07B;
+  --secondary-color-2: #7E6527;
   --black-color: #080904;
-  --black-color-80: rgba(8, 9, 4, 0.8);;
+  --black-color-80: rgba(8, 9, 4, 0.8);
   --white-color: #F9FAFC;
-  --white-color-90: #F9FAFC90;
-  --btn-color: #CBCCCD;
   --background-color: rgba(29, 39, 34, 0.8);
   --background-color-cero: rgba(29, 39, 34, 0);
-  --border: #7E6527 2px solid;
+  --border: var(--secondary-color-2) 2px solid;
 }
 
 * {
@@ -24,7 +21,7 @@ html {
 }
 
 body {
-  background: radial-gradient(97.5% 97.5% at 50% 2.5%, #001D19 0%, #091000 49.55%, #050400 100%, #050400 100%);
+  background: radial-gradient(226.25% 100% at 50.39% 0%, #001D19 0%, #091000 49.48%, #050400 100%)
 }
 
 h1 {
