@@ -2,7 +2,7 @@ import React, { useRef, useState } from "react";
 import linkedinIcon from "../../assets/linkedin-icon.svg";
 import githubIcon from "../../assets/github-icon.svg";
 import sendIcon from "../../assets/send-icon.svg";
-import { FormattedMessage} from "react-intl";
+import { FormattedMessage } from "react-intl";
 import emailjs from "@emailjs/browser";
 import Swal from "sweetalert2";
 import withReactContent from "sweetalert2-react-content";
@@ -115,7 +115,6 @@ export const Contact = () => {
                       onKeyUp={validation}
                       onBlur={validation}
                       valido={userName.valido}
-                      // placeholder={errorNameMessage}
                     />
                   </div>
                   <div>
@@ -132,7 +131,6 @@ export const Contact = () => {
                       onKeyUp={validation}
                       onBlur={validation}
                       valido={userEmail.valido}
-                      // placeholder={errorEmailMessage}
                     />
                   </div>
                 </div>
@@ -164,15 +162,17 @@ export const Contact = () => {
                     </p>
                   </button>
                 </div>
-                {validateForm === false && (
-                  <p className="error-send">
-                    <b>Error:</b>{" "}
-                    <FormattedMessage
-                      id="app.error-message"
-                      defaultMessage="Please fill in the form correctly."
-                    />
-                  </p>
-                )}
+                <p
+                  className={`${
+                    validateForm === false ? "error-send" : "error-send-hidden"
+                  }`}
+                >
+                  <b>Error:</b>{" "}
+                  <FormattedMessage
+                    id="app.error-message"
+                    defaultMessage="Please fill in the form correctly."
+                  />
+                </p>
               </form>
             </div>
           </div>
