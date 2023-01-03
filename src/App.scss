@@ -5,9 +5,10 @@
   --black-color: #080904;
   --black-color-80: rgba(8, 9, 4, 0.8);
   --white-color: #F9FAFC;
+  --negative-color: #711B00;
   --background-color: rgba(29, 39, 34, 0.8);
   --background-color-cero: rgba(29, 39, 34, 0);
-  --border: var(--secondary-color-2) 2px solid;
+  --border: 2px solid var(--secondary-color-2);
 }
 
 * {

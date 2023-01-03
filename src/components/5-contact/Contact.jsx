@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import linkedinIcon from "../../assets/linkedin-icon.svg";
 import githubIcon from "../../assets/github-icon.svg";
 import sendIcon from "../../assets/send-icon.svg";
@@ -12,8 +12,8 @@ export const Contact = () => {
   const [userName, setUserName] = useState({ campo: "", valido: null });
   const [userEmail, setUserEmail] = useState({ campo: "", valido: null });
   const [validateForm, setValidateForm] = useState(null);
-  const form = useRef();
-
+  const [valueName, setValueName] = useState(true);
+  const [valueEmail, setValueEmail] = useState(true);
   const expresions = {
     user_name: /^[a-zA-ZÀ-ÿ\s]{1,40}$/,
     user_email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
@@ -26,19 +26,6 @@ export const Contact = () => {
   const onChangeEmail = (e2) => {
     setUserEmail({ ...userEmail, campo: e2.target.value });
   };
-
-  let errorNameMessage;
-  let errorEmailMessage;
-
-  if (expresions.user_name && expresions.user_email) {
-    if (!expresions.user_name.test(userName.campo)) {
-      errorNameMessage = "El nombre solo puede contener letras";
-    }
-
-    if (!expresions.user_email.test(userEmail.campo)) {
-      errorEmailMessage = "Ingrese un email valido.";
-    }
-  }
 
   const validation = () => {
     if (expresions.user_name && expresions.user_email) {
@@ -59,6 +46,22 @@ export const Contact = () => {
 
   const sendEmail = (event) => {
     event.preventDefault();
+
+    if (expresions.user_name) {
+      if (expresions.user_name.test(userName.campo)) {
+        setValueName(true);
+      } else {
+        setValueName(false);
+      }
+    }
+
+    if (expresions.user_email) {
+      if (expresions.user_email.test(userEmail.campo)) {
+        setValueEmail(true);
+      } else {
+        setValueEmail(false);
+      }
+    }
 
     const serviceID = "service_3gu69fh";
     const templateID = "template_flax1re";
@@ -99,7 +102,7 @@ export const Contact = () => {
         <div className="contact">
           <div className="contact-container">
             <div className="label-container">
-              <form ref={form} onSubmit={sendEmail} id="form">
+              <form onSubmit={sendEmail} id="form">
                 <div className="input-container">
                   <div>
                     <label htmlFor="user_name">
@@ -107,7 +110,9 @@ export const Contact = () => {
                     </label>
                     <input
                       type="text"
-                      className="input"
+                      className={`${
+                        valueName ? "name-input" : "name-error-input"
+                      }`}
                       id="user_name"
                       name="user_name"
                       value={userName.campo}
@@ -122,8 +127,10 @@ export const Contact = () => {
                       <FormattedMessage id="app.email" defaultMessage="Email" />
                     </label>
                     <input
-                      type="email"
-                      className="input"
+                      type="text"
+                      className={`${
+                        valueEmail ? "email-input" : "email-error-input"
+                      }`}
                       id="user_email"
                       name="user_email"
                       value={userEmail.campo}
