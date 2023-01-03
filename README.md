@@ -17,7 +17,6 @@ This is my portfolio as a frontend developer. You can view and download my CV, m
 
 Technologies used in the project:
 
-- HTML
 - Sass
 - React
 
