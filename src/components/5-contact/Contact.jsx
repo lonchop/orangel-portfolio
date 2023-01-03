@@ -102,7 +102,7 @@ export const Contact = () => {
               <form ref={form} onSubmit={sendEmail} id="form">
                 <div className="input-container">
                   <div>
-                    <label for="user_name">
+                    <label htmlFor="user_name">
                       <FormattedMessage id="app.name" defaultMessage="Name" />
                     </label>
                     <input
@@ -118,7 +118,7 @@ export const Contact = () => {
                     />
                   </div>
                   <div>
-                    <label for="user_email">
+                    <label htmlFor="user_email">
                       <FormattedMessage id="app.email" defaultMessage="Email" />
                     </label>
                     <input
@@ -136,7 +136,7 @@ export const Contact = () => {
                 </div>
                 <div className="input-container-2">
                   <div className="div">
-                    <label for="message">
+                    <label htmlFor="message">
                       <FormattedMessage
                         id="app.message"
                         defaultMessage="Message"

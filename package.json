@@ -1,8 +1,11 @@
 {
   "name": "orangel-portfolio",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
+  "description": "",
+  "author": "Orangel Gonzalez",
+  "license": " MIT",
   "scripts": {
     "dev": "vite --open",
     "build": "vite build",
