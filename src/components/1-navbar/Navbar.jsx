@@ -22,12 +22,10 @@ export const Navbar = ({ scrolling }) => {
 
   const clickActiveHam = () => {
     setActiveHam(!activeHam);
-    console.log(activeHam);
   };
 
   const clickDisabledHam = () => {
     setActiveHam(false);
-    console.log("disabled");
   };
 
   return (

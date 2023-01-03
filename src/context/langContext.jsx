@@ -38,14 +38,12 @@ const LangProvider = ({ children }) => {
         setLanguage(langSpanish);
         setLocale("en-ES");
         localStorage.setItem("lang", "en-ES");
-
         break;
       default:
         setLanguage(langEnglish);
         setLocale("en-US");
         localStorage.setItem("lang", "en-US");
     }
-    console.log("Change language", lang);
   };
 
   return (
