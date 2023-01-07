@@ -3,6 +3,7 @@
 
 .navbar {
   position: fixed;
+  z-index: 3;
   display: flex;
   width: 100%;
   height: 64px;
@@ -11,7 +12,6 @@
   align-items: center;
   font-weight: 500;
   justify-content: space-between;
-  z-index: 3;
 }
 
 .navbar-cero {
@@ -83,19 +83,19 @@
 }
 
 .navbar-ham-none {
+  z-index: 2;
   width: 100%;
   height: 64px;
   transition: all 0.3s ease-in-out;
-  z-index: 2;
 }
 
 .navbar-ham {
+  z-index: 1;
+  display: flex;
   width: 100%;
   height: 224px;
-  display: flex;
-  justify-content: center;
-  z-index: 1;
   transition: all 0.3s ease-in-out;
+  justify-content: center;
 }
 
 .links-ham-none {
@@ -104,9 +104,9 @@
 
 .links-ham {
   display: flex;
-  flex-direction: column;
   font-size: 2rem;
   color: var(--white-color);
+  flex-direction: column;
   list-style: none;
   gap: 16px;
   margin-top: 48px;
@@ -114,11 +114,11 @@
 
 .btn-link-ham {
   width: 360px;
-  font-size: 1.8rem;
   font-family: "Roboto", sans-serif;
-  background-color: transparent;
+  font-size: 1.8rem;
   color: var(--white-color);
   border: none;
+  background-color: transparent;
   font-weight: 500;
 }
 
@@ -128,21 +128,21 @@
 }
 
 .btn-up {
-  display: flex;
-  border: none;
-  background-color: transparent;
-  border-radius: 100%;
   position: fixed;
   right: 20px;
   bottom: 48px;
+  display: flex;
+  border: none;
   transition: all 0.3s ease-in-out;
+  background-color: transparent;
+  border-radius: 100%;
 }
 
 .up-icon {
   width: 56px;
   height: 56px;
-  border-radius: 100%;
   transition: all 0.3s ease-in-out;
+  border-radius: 100%;
 }
 
 @media screen and (min-width: 768px) {

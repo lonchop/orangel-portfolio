@@ -3,9 +3,9 @@
 
 .about {
   display: flex;
-  flex-direction: column-reverse;
   width: 100%;
   height: 100vh;
+  flex-direction: column-reverse;
   justify-content: center;
   align-items: center;
   border-bottom: var(--border);
@@ -16,11 +16,11 @@
 }
 
 .text-about {
-  color: var(--white-color);
-  font-size: 2.0rem;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 400;
   margin: 0 20px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 2.0rem;
+  color: var(--white-color);
+  font-weight: 400;
 }
 
 .btn-download-container {
@@ -32,21 +32,21 @@
 }
 
 .btn-download {
+  display: flex;
   width: 220px;
   height: 60px;
+  border: none;
+  box-shadow: 0px 4px 4px rgba(255, 255, 255, 0.25);
   border-radius: 6px;
   background-color: var(--secondary-color-1);
-  border: none;
-  display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0px 4px 4px rgba(255, 255, 255, 0.25);
 }
 
 .btn-download img {
   width: 24px;
-  margin-right: 16px;
   color: var(--black-color);
+  margin-right: 16px;
 }
 
 .btn-download>p {
@@ -59,42 +59,42 @@
 
 @media screen and (min-width: 768px) {
   .about {
-    flex-direction: row;
     width: 100%;
     height: 100vh;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
   }
 
   .text-about-container {
-    width: 100%;
     display: flex;
+    width: 100%;
     justify-content: center;
     align-items: center;
   }
 
   .text-about {
-    font-size: 2.4rem;
     margin: 0 40px;
+    font-size: 2.4rem;
 
   }
 
   .btn-download-container {
-    margin-top: 40px;
-    width: 100%;
     display: flex;
+    width: 100%;
+    width: 100%;
+    margin-top: 40px;
     justify-content: center;
     align-items: center;
-    width: 100%;
   }
 
   .btn-download {
+    display: flex;
     width: 220px;
     height: 60px;
+    border: none;
     border-radius: 6px;
     background-color: var(--secondary-color-1);
-    border: none;
-    display: flex;
     justify-content: center;
     align-items: center;
   }
@@ -112,51 +112,51 @@
 
 @media screen and (min-width: 1024px) {
   .about {
-    flex-direction: row;
     width: 100%;
     height: 100vh;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
   }
 
   .text-about-container {
-    width: 100%;
     display: flex;
+    width: 100%;
     justify-content: center;
     align-items: center;
   }
 
   .text-about {
-    font-size: 2.8rem;
     margin: 0 80px;
+    font-size: 2.8rem;
 
   }
 
   .btn-download-container {
-    margin-top: 40px;
-    width: 100%;
     display: flex;
+    width: 100%;
+    width: 100%;
+    margin-top: 40px;
     justify-content: center;
     align-items: center;
-    width: 100%;
   }
 
   .btn-download {
+    display: flex;
     width: 240px;
     height: 64px;
+    border: none;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
     border-radius: 6px;
     background-color: var(--secondary-color-1);
-    border: none;
-    display: flex;
     justify-content: center;
     align-items: center;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
   }
 
   .btn-download:hover {
-    background-color: var(--primary-color);
     transition: all 0.3s ease-in-out;
+    background-color: var(--primary-color);
   }
 
   .btn-download img {

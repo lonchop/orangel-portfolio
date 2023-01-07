@@ -2,10 +2,10 @@
 
 .hero {
   display: flex;
-  flex-direction: column-reverse;
   width: 100%;
   height: 100%;
   font-family: 'Poppins', sans-serif;
+  flex-direction: column-reverse;
   justify-content: center;
   align-items: center;
   border-bottom: var(--border);
@@ -20,14 +20,14 @@
 
 .title-h1 {
   font-size: 2.8rem;
-  color: var(--white-color);
   text-align: center;
+  color: var(--white-color);
 }
 
 .title-h2 {
   font-size: 2rem;
-  color: var(--white-color);
   text-align: center;
+  color: var(--white-color);
 }
 
 .img-container {
@@ -37,22 +37,22 @@
 .profile-image {
   width: 200px;
   height: 200px;
-  border-radius: 100%;
   box-shadow: 4px 8px 8px rgba(146, 160, 123, 0.4);
+  border-radius: 100%;
 }
 
 
 @media screen and (min-width: 768px) {
   .hero {
-    flex-direction: row;
     height: 100vh;
+    flex-direction: row;
   }
 
   .title-container {
     display: flex;
+    width: 100%;
     justify-content: center;
     align-items: center;
-    width: 100%;
     margin-top: 64px;
   }
 
@@ -66,9 +66,9 @@
 
   .img-container {
     display: flex;
+    width: 100%;
     justify-content: center;
     align-items: center;
-    width: 100%;
     margin-top: 64px;
   }
 

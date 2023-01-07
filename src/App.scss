@@ -4,7 +4,8 @@
   --secondary-color-2: #7E6527;
   --black-color: #080904;
   --black-color-80: rgba(8, 9, 4, 0.8);
-  --white-color: #F9FAFC;
+  --white-color: #f9fafc;
+  --white-color-80: rgba(249, 250, 252, 0.8);
   --negative-color: #711B00;
   --background-color: rgba(29, 39, 34, 0.8);
   --background-color-cero: rgba(29, 39, 34, 0);
@@ -22,10 +23,19 @@ html {
 }
 
 body {
-  background: radial-gradient(226.25% 100% at 50.39% 0%, #001D19 0%, #091000 49.48%, #050400 100%)
+  background: radial-gradient(226.25% 100% at 50.39% 0%, #001D19 0%, #091000 49.48%, #050400 100%);
 }
 
-h1 {
-  font-size: 40px;
-  color: white;
+// SCROLLBAR GENERAL
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--black-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--white-color-80);
+  border-radius: 2px;
 }
