@@ -25,6 +25,7 @@
   margin-bottom: 40px;
 }
 
+// TABLET
 @media screen and (min-width: 768px) {
   .projects h2 {
     font-size: 2.8rem;
@@ -43,6 +44,7 @@
   }
 }
 
+// DESKTOP
 @media screen and (min-width: 1024px) {
   .projects h2 {
     font-size: 2.8rem;

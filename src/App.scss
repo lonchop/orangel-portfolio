@@ -3,12 +3,12 @@
   --secondary-color-1: #92A07B;
   --secondary-color-2: #7E6527;
   --black-color: #080904;
-  --black-color-80: rgba(8, 9, 4, 0.8);
+  --black-color-transparent: rgba(8, 9, 4, 0.9);
   --white-color: #f9fafc;
-  --white-color-80: rgba(249, 250, 252, 0.8);
+  --white-color-transparent: rgba(249, 250, 252, 0.9);
   --negative-color: #711B00;
   --background-color: rgba(29, 39, 34, 0.8);
-  --background-color-cero: rgba(29, 39, 34, 0);
+  --background-color-transparent: rgba(29, 39, 34, 0);
   --border: 2px solid var(--secondary-color-2);
 }
 
@@ -36,6 +36,6 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: var(--white-color-80);
+  background-color: var(--white-color-transparent);
   border-radius: 2px;
 }

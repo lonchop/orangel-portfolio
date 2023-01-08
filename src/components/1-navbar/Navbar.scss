@@ -15,7 +15,7 @@
 }
 
 .navbar-cero {
-  background: var(--background-color-cero);
+  background: var(--background-color-transparent);
 }
 
 .navbar-container {
@@ -145,6 +145,7 @@
   border-radius: 100%;
 }
 
+// TABLET
 @media screen and (min-width: 768px) {
   .navbar {
     height: 72px;
@@ -218,6 +219,7 @@
   }
 }
 
+// DESKTOP
 @media screen and (min-width: 1024px) {
   .navbar {
     height: 80px;
@@ -236,7 +238,14 @@
 
   .links li {
     margin: 0 14px;
+    transition: all 0.3s ease-in-out;
     cursor: pointer;
+  }
+
+  .links li:hover,
+  .links li:active {
+    transition: all 0.3s ease-in-out;
+    text-decoration: underline;
   }
 
   .btn-change-container {

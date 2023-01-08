@@ -133,7 +133,7 @@
 }
 
 .text-area::-webkit-scrollbar-thumb {
-  background-color: var(--black-color);
+  background-color: var(--black-color-transparent);
   border-radius: 2px;
 }
 
@@ -215,7 +215,7 @@
   color: var(--white-color);
 }
 
-// Tablet
+// TABLET
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   .contact-footer {
     display: flex;
@@ -274,7 +274,7 @@
   }
 }
 
-// Desktop
+// DESKTOP
 @media screen and (min-width: 1024px) {
   .contact {
     height: 100vh;
