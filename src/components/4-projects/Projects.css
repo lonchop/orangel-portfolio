@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
+.projects {
+  display: flex;
+  width: 100%;
+  height: auto;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-bottom: var(--border);
+}
+
+.projects h2 {
+  font-family: "Poppins", sans-serif;
+  font-size: 2.4rem;
+  text-transform: uppercase;
+  color: var(--white-color);
+  margin-top: 88px;
+  margin-bottom: 20px;
+}
+
+.cards-container {
+  margin-bottom: 40px;
+}
+
+.card {
+  width: 280px;
+  height: 160px;
+  background-color: var(--white-color);
+  margin-bottom: 24px;
+  border-radius: 2px;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.card img {
+  width: 280px;
+  height: 160px;
+  border: var(--white-color) 2px solid;
+  border-radius: 2px;
+}
+
+@media screen and (min-width: 768px) {
+  .projects h2 {
+    font-size: 2.8rem;
+    margin-top: 92px;
+  }
+  .cards-container {
+    display: grid;
+    margin: 0px 42px;
+    grid-template-areas: "card-1 card-2" "card-3 card-4";
+    row-gap: 40px;
+    -moz-column-gap: 40px;
+         column-gap: 40px;
+    margin-bottom: 80px;
+  }
+  .card {
+    width: 322px;
+    height: 184px;
+    margin-bottom: 0;
+  }
+  .card img {
+    width: 322px;
+    height: 184px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .projects h2 {
+    font-size: 2.8rem;
+    margin-top: 108px;
+    margin-bottom: 24px;
+  }
+  .cards-container {
+    display: grid;
+    margin: 0px 62px;
+    grid-template-areas: "card-1 card-2" "card-3 card-4";
+    row-gap: 60px;
+    -moz-column-gap: 60px;
+         column-gap: 60px;
+    margin-bottom: 80px;
+  }
+  .card {
+    width: 420px;
+    height: 240px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  .card img {
+    width: 420px;
+    height: 240px;
+  }
+}/*# sourceMappingURL=Projects.css.map */

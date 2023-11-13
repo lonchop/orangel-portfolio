@@ -1,0 +1,22 @@
+{
+  "app.home": "Home",
+  "app.about": "About",
+  "app.projects": "Projects",
+  "app.contact": "Contact",
+  "app.btn-short": "ES",
+  "app.btn-long": "Spanish",
+  "app.btn-cv": "Download CV",
+  "app.text-about": "I am a frontend developer, I focus on making web applications using HTML, CSS, JavaScript and frameworks such as tailwind and React, in order to drive projects. My goal is to develop web applications for Startups in the technology industry, remotely.",
+  "app.title-project": "Projects",
+  "app.view-demo": "View Demo",
+  "app.description-project-1": "Twitter clone made with HTML and CSS",
+  "app.description-project-2": "Wordle game made with HTML, CSS and JavaScript",
+  "app.description-project-3": "To do app made with React",
+  "app.description-project-4": "Layout of an illustration portfolio made with HTML and CSS",
+  "app.name": "Name",
+  "app.email": "Your Email",
+  "app.message": "Message",
+  "app.btn-send": "Send now",
+  "app.footer-text": "Made by ",
+  "app.error-message": "Please fill in the form correctly."
+}

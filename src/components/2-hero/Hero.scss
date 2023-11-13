@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+.hero {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  font-family: 'Poppins', sans-serif;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+  border-bottom: var(--border);
+}
+
+.title-container {
+  text-transform: uppercase;
+  flex-direction: column;
+  margin-top: 20px;
+  margin-bottom: 42px;
+}
+
+.title-h1 {
+  font-size: 2.8rem;
+  text-align: center;
+  color: var(--white-color);
+}
+
+.title-h2 {
+  font-size: 2rem;
+  text-align: center;
+  color: var(--white-color);
+}
+
+.img-container {
+  margin-top: 124px;
+}
+
+.profile-image {
+  width: 200px;
+  height: 200px;
+  box-shadow: 4px 8px 8px rgba(135, 204, 146, 0.4);
+  border-radius: 100%;
+}
+
+// TABLET
+@media screen and (min-width: 768px) {
+  .hero {
+    height: 100vh;
+    flex-direction: row;
+  }
+
+  .title-container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 64px;
+  }
+
+  .title-h1 {
+    font-size: 3.2rem;
+  }
+
+  .title-h2 {
+    font-size: 2.4rem;
+  }
+
+  .img-container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 64px;
+  }
+
+  .profile-image {
+    width: 240px;
+    height: 240px;
+  }
+}
+
+// DESKTOP
+@media screen and (min-width: 1024px) {
+  .hero {
+    height: 100vh;
+  }
+
+  .title-h1 {
+    font-size: 5.2rem;
+  }
+
+  .title-h2 {
+    font-size: 4.0rem;
+  }
+
+  .profile-image {
+    width: 320px;
+    height: 320px;
+  }
+}

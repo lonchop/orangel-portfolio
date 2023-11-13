@@ -1,0 +1,370 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
+
+.contact {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  border-bottom: var(--border);
+}
+
+.contact-container {
+  display: flex;
+  width: 300px;
+  height: 380px;
+  background-color: var(--primary-color);
+  margin-top: 72px;
+  margin-bottom: 16px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 2px;
+}
+
+.label-container {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+
+.label-container label {
+  font-family: "Poppins", sans-serif;
+  font-size: 2rem;
+  color: var(--black-color);
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input-container-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input-container div {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  margin-bottom: 6px;
+}
+
+.div {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+
+.name-input {
+  width: 240px;
+  height: 36px;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.8rem;
+  outline: none;
+  border: 2px solid transparent;
+  border-radius: 2px;
+  background-color: var(--white-color);
+  padding-left: 4px;
+}
+
+.name-error-input {
+  width: 240px;
+  height: 36px;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.8rem;
+  outline: none;
+  border: 2px solid var(--negative-color);
+  border-radius: 2px;
+  background-color: var(--white-color);
+  padding-left: 4px;
+}
+
+.email-input {
+  width: 240px;
+  height: 36px;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.8rem;
+  outline: none;
+  border: 2px solid transparent;
+  border-radius: 2px;
+  background-color: var(--white-color);
+  padding-left: 4px;
+}
+
+.email-error-input {
+  width: 240px;
+  height: 36px;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.8rem;
+  outline: none;
+  border: 2px solid var(--negative-color);
+  border-radius: 2px;
+  background-color: var(--white-color);
+  padding-left: 4px;
+}
+
+.text-area {
+  width: 240px;
+  height: 80px;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.8rem;
+  outline: none;
+  border: none;
+  resize: none;
+  border-radius: 2px;
+  background-color: var(--white-color);
+  padding-top: 4px;
+  padding-left: 4px;
+}
+
+.text-area::-webkit-scrollbar {
+  width: 6px;
+}
+
+.text-area::-webkit-scrollbar-track {
+  background-color: var(--white-color);
+}
+
+.text-area::-webkit-scrollbar-thumb {
+  background-color: var(--black-color-transparent);
+  border-radius: 2px;
+}
+
+.btn-send-container {
+  display: flex;
+  justify-content: center;
+}
+
+.btn-send {
+  display: flex;
+  width: 220px;
+  height: 60px;
+  border: none;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 6px;
+  background-color: var(--black-color);
+  justify-content: center;
+  align-items: center;
+  margin-top: 16px;
+}
+
+.btn-send img {
+  width: 24px;
+  color: var(--white-color);
+  margin-right: 16px;
+}
+
+.btn-send p {
+  font-family: "Manrope", sans-serif;
+  font-size: 1.8rem;
+  color: var(--white-color);
+  font-weight: 600;
+}
+
+.error-send {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.4rem;
+  text-align: center;
+  margin-top: 6px;
+}
+
+.error-send-hidden {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.4rem;
+  text-align: center;
+  opacity: 0;
+  margin-top: 6px;
+}
+
+.footer {
+  display: flex;
+  width: 100%;
+  height: auto;
+  flex-direction: column;
+  align-items: center;
+}
+
+.social-media {
+  display: flex;
+  width: 180px;
+  justify-content: space-evenly;
+  margin-top: 20px;
+  margin-bottom: 12px;
+}
+
+.social-media img {
+  width: 52px;
+}
+
+.footer p {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.8rem;
+  color: var(--secondary-color-2);
+  margin-bottom: 24px;
+  font-weight: 400;
+}
+
+.footer p span {
+  color: var(--white-color);
+}
+
+// TABLET
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .contact-footer {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    border-bottom: none;
+  }
+
+  .contact {
+    height: 100vh;
+    border-bottom: none;
+  }
+
+  .contact-container {
+    width: 360px;
+    height: 380px;
+    margin-left: 40px;
+    margin-top: 80px;
+  }
+
+  .input-container div {
+    margin-bottom: 8px;
+  }
+
+  .name-input {
+    width: 320px;
+    height: 36px;
+  }
+
+  .name-error-input {
+    width: 320px;
+    height: 36px;
+    border: 2px solid var(--negative-color);
+  }
+
+  .email-input {
+    width: 320px;
+    height: 36px;
+  }
+
+  .email-error-input {
+    width: 320px;
+    height: 36px;
+    border: 2px solid var(--negative-color);
+  }
+
+  .text-area {
+    width: 320px;
+    height: 80px;
+  }
+
+  .footer {
+    margin-top: 40px;
+  }
+}
+
+// DESKTOP
+@media screen and (min-width: 1024px) {
+  .contact {
+    height: 100vh;
+  }
+
+  .contact-container {
+    width: 780px;
+    height: 380px;
+    margin-top: 96px;
+  }
+
+  .input-container {
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .input-container-2 {
+    justify-content: center;
+  }
+
+  .input-container div {
+    margin-bottom: 12px;
+  }
+
+  .name-input {
+    width: 320px;
+    height: 36px;
+  }
+
+  .name-error-input {
+    width: 320px;
+    height: 36px;
+    border: 2px solid var(--negative-color);
+  }
+
+  .email-input {
+    width: 320px;
+    height: 36px;
+  }
+
+  .email-error-input {
+    width: 320px;
+    height: 36px;
+    border: 2px solid var(--negative-color);
+  }
+
+  .text-area {
+    width: 660px;
+    height: 120px;
+  }
+
+  .btn-send {
+    width: 240px;
+    height: 64px;
+    cursor: pointer;
+  }
+
+  .btn-send p {
+    font-size: 2rem;
+  }
+
+  .social-media {
+    width: 200px;
+  }
+
+  .social-media img {
+    width: 60px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+  }
+
+  .footer p {
+    font-size: 2rem;
+  }
+}
+
+.swal2-title {
+  font-family: "Manrope", sans-serif;
+  font-size: 1.8rem;
+  color: var(--black-color);
+}
+
+.swal2-loader {
+  width: 3.2em;
+  height: 3.2em;
+  margin: 0 8px;
+  animation: swal2-rotate-loading 1.6s linear 0s infinite normal;
+  border-width: 4px;
+  border-style: solid;
+  border-radius: 100%;
+  border-color: var(--primary-color) rgba(0, 0, 0, 0) var(--primary-color) rgba(0, 0, 0, 0);
+}

@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap");
+.hero {
+  display: flex;
+  flex-direction: column-reverse;
+  width: 100%;
+  height: 100%;
+  font-family: "Poppins", sans-serif;
+  justify-content: center;
+  align-items: center;
+  border-bottom: var(--border);
+}
+
+.title-container {
+  text-transform: uppercase;
+  flex-direction: column;
+  margin-top: 20px;
+  margin-bottom: 42px;
+}
+
+.title-h1 {
+  font-size: 2.8rem;
+  color: var(--white-color);
+  text-align: center;
+}
+
+.title-h2 {
+  font-size: 2rem;
+  color: var(--white-color);
+  text-align: center;
+}
+
+.img-container {
+  margin-top: 124px;
+}
+
+.profile-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .hero {
+    flex-direction: row;
+    height: 100vh;
+  }
+  .title-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 64px;
+  }
+  .title-h1 {
+    font-size: 3.2rem;
+  }
+  .title-h2 {
+    font-size: 2.4rem;
+  }
+  .img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 64px;
+  }
+  .profile-image {
+    width: 240px;
+    height: 240px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .hero {
+    height: 100vh;
+  }
+  .title-h1 {
+    font-size: 5.2rem;
+  }
+  .title-h2 {
+    font-size: 4rem;
+  }
+  .profile-image {
+    width: 340px;
+    height: 340px;
+  }
+}/*# sourceMappingURL=Hero.css.map */

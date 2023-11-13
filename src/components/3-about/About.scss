@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@600&display=swap');
+
+.about {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+  border-bottom: var(--border);
+}
+
+.text-about-container {
+  margin-top: 40px;
+}
+
+.text-about {
+  margin: 0 20px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 2.0rem;
+  color: var(--white-color);
+  font-weight: 400;
+}
+
+.btn-download-container {
+  margin-top: 40px;
+}
+
+.link-cv {
+  text-decoration: none;
+}
+
+.btn-download {
+  display: flex;
+  width: 220px;
+  height: 60px;
+  background-color: var(--secondary-color-1);
+  border: none;
+  border-radius: 6px;
+  box-shadow: 0px 4px 4px rgba(255, 255, 255, 0.25);
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-download img {
+  width: 24px;
+  margin-right: 16px;
+  color: var(--black-color);
+}
+
+.btn-download>p {
+  font-family: 'Manrope', sans-serif;
+  font-size: 1.8rem;
+  color: var(--black-color);
+  font-weight: 600;
+}
+
+// TABLET
+@media screen and (min-width: 768px) {
+  .about {
+    width: 100%;
+    height: 100vh;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .text-about-container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .text-about {
+    margin: 0 40px;
+    font-size: 2.4rem;
+
+  }
+
+  .btn-download-container {
+    display: flex;
+    width: 100%;
+    width: 100%;
+    margin-top: 40px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .btn-download {
+    display: flex;
+    width: 220px;
+    height: 60px;
+    background-color: var(--secondary-color-1);
+    border: none;
+    border-radius: 6px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .btn-download img {
+    width: 24px;
+    margin-right: 16px;
+  }
+
+  .btn-download>p {
+    font-family: 'Manrope', sans-serif;
+    font-size: 1.8rem;
+  }
+}
+
+// DESKTOP
+@media screen and (min-width: 1024px) {
+  .about {
+    width: 100%;
+    height: 100vh;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .text-about-container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .text-about {
+    margin: 0 80px;
+    font-size: 2.8rem;
+
+  }
+
+  .btn-download-container {
+    display: flex;
+    width: 100%;
+    width: 100%;
+    margin-top: 40px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .btn-download {
+    display: flex;
+    width: 240px;
+    height: 64px;
+    background-color: var(--secondary-color-1);
+    border: none;
+    border-radius: 6px;
+    transition: background-color 0.5s ease-in-out;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .btn-download:hover {
+    background-color: var(--primary-color);
+    transition: background-color 0.3s ease-in-out;
+  }
+
+  .btn-download img {
+    width: 28px;
+    margin-right: 16px;
+  }
+
+  .btn-download>p {
+    font-size: 2rem;
+  }
+}
